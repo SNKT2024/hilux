@@ -6,17 +6,13 @@ import {
   Navbar,
   NavbarBrand,
   Offcanvas,
-  OffcanvasBody,
 } from "react-bootstrap";
-import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
-import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom";
 import "../css/color.css";
 import "../css/main.css";
 
 import "../css/navigation.css";
-import { Element } from "react-scroll";
 
 export default function Navigation() {
   const [showOffCanvas, setShowOffCanvas] = useState(false);
@@ -28,9 +24,11 @@ export default function Navigation() {
     <>
       <Navbar collapseOnSelect expand="lg" className=" nav " sticky="top">
         <Container className="container">
-          <Nav>
-            <h3 className="logo">HILUX</h3>
-          </Nav>
+          <NavbarBrand>
+            <Link to={"/"}>
+              <h3 className="logo">HILUX</h3>
+            </Link>
+          </NavbarBrand>
           <NavbarToggle
             aria-controls="offcanvas"
             onClick={() => setShowOffCanvas(!showOffCanvas)}
