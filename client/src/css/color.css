@@ -1,0 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Top Bar Color */
+.bgc-top {
+  background-color: #526d82;
+}

@@ -1,0 +1,16 @@
+/* intro-responsive.css */
+
+/* Adjust the font size of the list items for smaller screens */
+@media screen and (max-width: 200px) {
+  .points li {
+    font-size: 13px;
+  }
+}
+
+/* Override the image size to fit smaller screens */
+@media screen and (max-width: 200px) {
+  .img-intro .img-lab {
+    max-width: 100%;
+    height: auto;
+  }
+}

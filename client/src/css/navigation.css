@@ -1,0 +1,52 @@
+.off-canvas {
+  transition: transform 0.2s ease-in-out;
+}
+
+.off-canvas.open {
+  transition: tanslateX(1);
+}
+
+.off-canvas-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav {
+  background-color: #79e0ee;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+  color: #526d82;
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  font-weight: 600;
+}
+
+.brand {
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navlink {
+  font-weight: 500;
+  display: inline-block;
+  padding-bottom: 2px; /* Adjust the padding value to control the space */
+  text-decoration: none; /* Disable the default underline */
+  border-bottom: 2px solid transparent; /* Set the initial border color to transparent */
+}
+
+.navlink:hover {
+  border-bottom-color: black; /* Adjust the color as needed */
+  border-width: 2px;
+}
