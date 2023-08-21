@@ -15,36 +15,38 @@ import { Card, Col, Container, Image, Row } from "react-bootstrap";
 export default function Accreditations() {
   return (
     <>
-      <Container className="man-cont-acc mt-3">
-        <Container className="">
-          <h1>Accreditations</h1>
+      <div className="wrap-acc">
+        <Container className="man-cont-acc mt-3 view">
+          <Container className="">
+            <h1>Accreditations</h1>
+          </Container>
+          <Container className="  mt-5 ">
+            <Row className="main-row-acc" md={2}>
+              <Col lg={3} xs={6} className="mb-3">
+                <Imagecard img={img1} />
+              </Col>
+              <Col lg={3} xs={6} className="mb-3">
+                <Imagecard img={img2} />
+              </Col>
+              <Col lg={3} xs={6} className="mb-3">
+                <Imagecard img={img3} />
+              </Col>
+              <Col lg={3} xs={6} className="mb-3">
+                <Imagecard img={img4} />
+              </Col>
+              <Col lg={3} xs={6} className="mb-3 text-center">
+                <Imagecard img={img5} />
+              </Col>
+              <Col lg={3} xs={6} className="mb-3 text-center">
+                <Imagecard img={img6} />
+              </Col>
+              <Col lg={3} xs={6} className="mb-3 text-center">
+                <Imagecard img={img7} />
+              </Col>
+            </Row>
+          </Container>
         </Container>
-        <Container className="  mt-5 ">
-          <Row className="main-row-acc" md={2}>
-            <Col lg={3} xs={6} className="mb-3">
-              <Imagecard img={img1} />
-            </Col>
-            <Col lg={3} xs={6} className="mb-3">
-              <Imagecard img={img2} />
-            </Col>
-            <Col lg={3} xs={6} className="mb-3">
-              <Imagecard img={img3} />
-            </Col>
-            <Col lg={3} xs={6} className="mb-3">
-              <Imagecard img={img4} />
-            </Col>
-            <Col lg={3} xs={6} className="mb-3 text-center">
-              <Imagecard img={img5} />
-            </Col>
-            <Col lg={3} xs={6} className="mb-3 text-center">
-              <Imagecard img={img6} />
-            </Col>
-            <Col lg={3} xs={6} className="mb-3 text-center">
-              <Imagecard img={img7} />
-            </Col>
-          </Row>
-        </Container>
-      </Container>
+      </div>
     </>
   );
 }
@@ -57,13 +59,5 @@ const Imagecard = (props) => {
         <Image src={props.img} className="img-man-acc" />
       </div>
     </Card>
-  );
-};
-
-const Heading = (props) => {
-  return (
-    <div className="head">
-      <h5>{props.text}</h5>
-    </div>
   );
 };

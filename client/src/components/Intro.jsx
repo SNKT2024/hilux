@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
-import img1 from "../assets/images/Picture1.jpg";
+import img1 from "../assets/images/Intro1.jpg";
 import "../css/color.css";
 import "../css/intro.css";
 import "../css/main.css";
@@ -14,7 +14,7 @@ export default function Intro() {
           <Row md={2}>
             <Col lg={6} className="title-container p-0 m-0">
               <div className="title text-center">
-                <h1 className="mb-1">PHARMACEUTICAL EXPOTER OF INDIA</h1>
+                <h1 className="mb-1">PHARMACEUTICAL EXPORTER OF INDIA</h1>
                 <h3>#SERVING HUMANITY</h3>
               </div>
             </Col>

@@ -68,6 +68,14 @@ export default function Navigation() {
                 >
                   About Us
                 </NavLink>
+                <NavLink
+                  className="navlink"
+                  as={Link}
+                  to={"/contactus"}
+                  onClick={closeOffCanvas}
+                >
+                  Contact Us
+                </NavLink>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>

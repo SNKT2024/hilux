@@ -1,31 +1,43 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./components/Home";
 import Topbar from "./components/Topbar";
 import Navigation from "./components/Navigation";
-import Foot from "./components/Foot";
+
 import Aboutus from "./components/Aboutus";
 import Products from "./components/Products";
-import Foottemp from "./components/Foottemp";
-import Temp from "./components/Temp";
-import Category_One from "./components/Table/Category_One";
-import Category_Two from "./components/Table/Category_Two";
-import Category_Three from "./components/Table/Category_Three";
-import Category_Four from "./components/Table/Category_Four";
-import Category_Five from "./components/Table/Category_Five";
-import Category_Six from "./components/Table/Category_Six";
-import Category_Seven from "./components/Table/Category_Seven";
-import Category_Eight from "./components/Table/Category_Eight";
-import Category_Eleven from "./components/Table/Category_Twelve";
-import Category_Thirteen from "./components/Table/Category_Thirteen";
-import Category_Fourteen from "./components/Table/Category_Fourteen";
-import Category_Fifteen from "./components/Table/Category_Fifteen";
-import Category_Sixteen from "./components/Table/Category_Sixteen";
-import Category_Seventeen from "./components/Table/Category_Seventeen";
-import Category_Eighteen from "./components/Table/Category_Eighteen";
-import Category_Nineteen from "./components/Table/Category_Nineteen";
-import Category_Twenty from "./components/Table/Category_Twenty";
-import Category_Twelve from "./components/Table/Category_Twelve";
-import Category_Eleve from "./components/Table/Category_Eleven";
+
+import CATEGORY_ONE from "./components/Table/Category_One";
+import CATEGORY_TWO from "./components/Table/Category_Two";
+import CATEGORY_THREE from "./components/Table/Category_Three";
+import CATEGORY_FOUR from "./components/Table/Category_Four";
+import CATEGORY_FIVE from "./components/Table/Category_Five";
+import CATEGORY_SIX from "./components/Table/Category_Six";
+import CATEGORY_SEVEN from "./components/Table/Category_Seven";
+import CATEGORY_EIGHT from "./components/Table/Category_Eight";
+import CATEGORY_ELEVEN from "./components/Table/Category_Eleven";
+import CATEGORY_THIRTEEN from "./components/Table/Category_Thirteen";
+import CATEGORY_FOURTEEN from "./components/Table/Category_Fourteen";
+import CATEGORY_FIFTEEN from "./components/Table/Category_Fifteen";
+import CATEGORY_SIXTEEN from "./components/Table/Category_Sixteen";
+import CATEGORY_SEVENTEEN from "./components/Table/Category_Seventeen";
+import CATEGORY_EIGHTEEN from "./components/Table/Category_Eighteen";
+import CATEGORY_NINETEEN from "./components/Table/Category_Nineteen";
+import CATEGORY_TWENTY from "./components/Table/Category_Twenty";
+import CATEGORY_TWELVE from "./components/Table/Category_Twelve";
+
+import Contactus from "./components/Contactus";
+import { useEffect } from "react";
+import Foot from "./components/Foot";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   return (
@@ -33,34 +45,35 @@ function App() {
       <BrowserRouter>
         <Topbar />
         <Navigation />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
 
           <Route path="/products" element={<Products />} />
-          <Route path="/category_one" element={<Category_One />} />
-          <Route path="/category_two" element={<Category_Two />} />
-          <Route path="/category_three" element={<Category_Three />} />
-          <Route path="/category_four" element={<Category_Four />} />
-          <Route path="/category_five" element={<Category_Five />} />
-          <Route path="/category_six" element={<Category_Six />} />
-          <Route path="/category_seven" element={<Category_Seven />} />
-          <Route path="/category_eight" element={<Category_Eight />} />
+          <Route path="/category_one" element={<CATEGORY_ONE />} />
+          <Route path="/category_two" element={<CATEGORY_TWO />} />
+          <Route path="/category_three" element={<CATEGORY_THREE />} />
+          <Route path="/category_four" element={<CATEGORY_FOUR />} />
+          <Route path="/category_five" element={<CATEGORY_FIVE />} />
+          <Route path="/category_six" element={<CATEGORY_SIX />} />
+          <Route path="/category_seven" element={<CATEGORY_SEVEN />} />
+          <Route path="/category_eight" element={<CATEGORY_EIGHT />} />
 
-          <Route path="/category_eleven" element={<Category_Eleve />} />
-          <Route path="/category_twelve" element={<Category_Twelve />} />
-          <Route path="/category_thirteen" element={<Category_Thirteen />} />
-          <Route path="/category_fourteen" element={<Category_Fourteen />} />
-          <Route path="/category_fifteen" element={<Category_Fifteen />} />
-          <Route path="/category_sixteen" element={<Category_Sixteen />} />
-          <Route path="/category_seventeen" element={<Category_Seventeen />} />
-          <Route path="/category_eighteen" element={<Category_Eighteen />} />
-          <Route path="/category_nineteen" element={<Category_Nineteen />} />
-          <Route path="/category_twenty" element={<Category_Twenty />} />
+          <Route path="/category_eleven" element={<CATEGORY_ELEVEN />} />
+          <Route path="/category_twelve" element={<CATEGORY_TWELVE />} />
+          <Route path="/category_thirteen" element={<CATEGORY_THIRTEEN />} />
+          <Route path="/category_fourteen" element={<CATEGORY_FOURTEEN />} />
+          <Route path="/category_fifteen" element={<CATEGORY_FIFTEEN />} />
+          <Route path="/category_sixteen" element={<CATEGORY_SIXTEEN />} />
+          <Route path="/category_seventeen" element={<CATEGORY_SEVENTEEN />} />
+          <Route path="/category_eighteen" element={<CATEGORY_EIGHTEEN />} />
+          <Route path="/category_nineteen" element={<CATEGORY_NINETEEN />} />
+          <Route path="/category_twenty" element={<CATEGORY_TWENTY />} />
 
           <Route path="/aboutus" element={<Aboutus />} />
+          <Route path="/contactus" element={<Contactus />} />
         </Routes>
-        {/* <Foot /> */}
-        <Foottemp />
+        <Foot />
       </BrowserRouter>
     </div>
   );

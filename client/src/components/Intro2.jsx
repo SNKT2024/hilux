@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
-import img1 from "../assets/images/Picture1.png";
+import img1 from "../assets/images/Intro2.png";
 import "../css/intro.css";
 import "../css/intro2.css";
 import "../css/intro2res.css";
@@ -10,14 +10,14 @@ import PublicIcon from "@mui/icons-material/Public";
 
 export default function Intro2() {
   return (
-    <div>
-      <Container className="wrapper">
+    <>
+      <Container className="wrapper-intro2">
         <div className="mt-3 p-3">
           <Row lg={6} md={2}>
             <Col lg={6} className="title-container p-0 m-0 " md={{ order: 1 }}>
               <div className="title text-center">
                 <h1 className="mb-1 text-we">
-                  WE ARE EXPOTER{" "}
+                  WE ARE EXPORTER{" "}
                   <span>
                     <PublicIcon fontSize="inherit" className="earth mb-2" />
                   </span>
@@ -40,6 +40,6 @@ export default function Intro2() {
           </Row>
         </div>
       </Container>
-    </div>
+    </>
   );
 }

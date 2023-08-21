@@ -1,0 +1,129 @@
+.form-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 35vw;
+  min-height: 50vh;
+  margin-bottom: 10px;
+}
+
+.app-container {
+  min-width: 50vw;
+  min-height: 87vh;
+}
+
+.form {
+  min-width: 30vw;
+  min-height: 60vh;
+  margin-top: 10%;
+}
+@media (min-width: 1024px) {
+  .app-container {
+    min-width: 50vw;
+    min-height: 87vh;
+  }
+
+  .form {
+    min-width: 30vw;
+    min-height: 60vh;
+    margin-top: 10%;
+  }
+  .form-container {
+    min-width: 35vw;
+    min-height: 50vh;
+  }
+}
+
+@media (max-width: 320px) {
+  .app-container {
+    min-width: 10vw;
+  }
+  .form {
+    min-width: 10vw;
+    min-height: 50vh;
+  }
+
+  .form-container {
+    min-width: 90vw;
+  }
+}
+
+@media (max-width: 375px) {
+  .app-container {
+    min-width: 50vw;
+  }
+  .form {
+    min-width: 10vw;
+    min-height: 50vh;
+  }
+
+  .form-container {
+    min-width: 90vw;
+  }
+}
+
+@media (max-width: 425px) {
+  .app-container {
+    min-width: 50vw;
+  }
+  .form {
+    min-width: 80vw;
+    min-height: 50vh;
+  }
+
+  .form-container {
+    min-width: 90vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-container {
+    min-width: 20vw;
+  }
+  .form {
+    min-width: 40vw;
+    min-height: 50vh;
+  }
+
+  .form-container {
+    min-width: 50vw;
+  }
+}
+
+@media (min-width: 1440px) {
+  .app-container {
+    min-width: 50vw;
+    min-height: 87vh;
+  }
+
+  .form {
+    min-width: 30vw;
+    min-height: 60vh;
+    margin-top: 10%;
+  }
+  .form-container {
+    min-width: 35vw;
+    min-height: 50vh;
+  }
+}
+
+@media (min-width: 2560px) {
+  .app-container {
+    min-width: 50vw;
+    min-height: 87vh;
+  }
+
+  .form {
+    min-width: 30vw;
+    min-height: 60vh;
+    margin-top: 10%;
+  }
+  .form-container {
+    min-width: 35vw;
+    min-height: 50vh;
+  }
+}
+
+.submit-button {
+  background-color: #0b83d7;
+}

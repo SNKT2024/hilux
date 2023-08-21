@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Container, Image, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import "../css/manufacture.css";
 import "../css/main.css";
 // import "../css/manuresponsive.css";
@@ -14,7 +14,7 @@ import img6 from "../assets/images/Manufacture/man_card_6.jpg";
 export default function Manufacture() {
   return (
     <>
-      <Container className="man-cont mt-3">
+      <Container className="man-cont mt-3 view">
         <Container className="">
           <h1>Manufacturers Of</h1>
         </Container>

@@ -1,94 +1,169 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { Col, Container, Row } from "react-bootstrap";
 import "../css/foot.css";
+import "../css/main.css";
+import "../css/foot-temp.css";
+
+import { Link } from "react-router-dom";
+
 export default function Foot() {
   return (
     <>
-      <footer className="footer ">
-        <Container fluid className="footer-container ">
-          <Row className="gy-4 footer-row">
-            <Col lg={5} md={12} className="footer-info ">
-              <a href="" className="d-flex align-items-center logo">
-                <span>HILUX</span>
-              </a>
-              <div className="social-links d-flex mt-4">
-                <a href="" className="me-2 ">
-                  <TwitterIcon fontSize="string" />
-                </a>
-                <a href="" className="me-2 ">
-                  <FacebookIcon fontSize="string" />
-                </a>
-                <a href="" className="me-2">
-                  <InstagramIcon fontSize="string " />
-                </a>
-                <a href="" className="socialicons">
-                  <LinkedInIcon fontSize="string" />
-                </a>
-              </div>
+      <Container fluid className="main-container-foot ">
+        <Row>
+          <Row lg={3} xs={1} md={3} className="pt-5">
+            <Col className="mb-4 ">
+              <Brand />
             </Col>
-            <Col lg={4} className="footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                {" "}
-                <li>
-                  <a href="#">Home</a>
-                </li>
-                <li>
-                  <a href="products.html">Products</a>
-                </li>
-                <li>
-                  <a href="about.html">About us</a>
-                </li>
-                <li>
-                  <a href="form.html">Contact Us</a>
-                </li>
-              </ul>
+            <Col>
+              <Links />
             </Col>
-            <Col
-              lg={3}
-              md={12}
-              className="footer-contact text-center text-md-start"
-            >
-              <h4>Contact Us</h4>
-              <p style={{ fontSize: "15px" }}>
-                Central avenue road,
-                <br />
-                Itwari, Nagpur
-                <br />
-                Maharashtra <br />
-                <br />
-                <strong>Phone:</strong> +91 9766547527
-                <br />
-                <strong>Email:</strong> kandarsushant@outlook.com
-                <br />
-              </p>
+            <Col className="contact-row">
+              <Contact />
             </Col>
           </Row>
-        </Container>
+          <Row lg={1} xs={1} className="pb-5 pt-5">
+            <Col>
+              <Credits />
+            </Col>
+          </Row>
+        </Row>
+      </Container>
+    </>
+  );
+}
 
-        <Container>
-          <div className="copyright">
+const Brand = () => {
+  return (
+    <>
+      <Container>
+        <Row lg={1} xs={1}>
+          <Col>
+            <Link to={"/"}>
+              <h2 className="fw-bold text-dark">HILUX</h2>
+            </Link>
+          </Col>
+          <Col className="social-links mt-2 ">
+            {" "}
+            {/* <a href="" className="me-3 socialicons-foot">
+              <TwitterIcon fontSize="string" />
+            </a> */}
+            <a
+              href="https://www.facebook.com/Hilux-Laboratories-103764962768523/"
+              className="me-3 socialicons-foot"
+            >
+              <FacebookIcon fontSize="string" />
+            </a>
+            {/* <a href="" className="me-3 socialicons-foot">
+              <InstagramIcon fontSize="string" />
+            </a> */}
+            <a
+              href="https://www.linkedin.com/company/hilux-laboratories/"
+              className="me-3 socialicons-foot"
+            >
+              <LinkedInIcon fontSize="string" />
+            </a>
+          </Col>
+        </Row>
+      </Container>
+    </>
+  );
+};
+
+const Links = () => {
+  return (
+    <Container fluid>
+      <Row lg={1} xs={1} className="mt-1">
+        <Col>
+          <h6 className="text-dark fw-bold">Useful Links</h6>
+        </Col>
+        <Col>
+          <ul>
+            <li>
+              <a href="/" className="usefulinks">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/products" className="usefulinks">
+                Products
+              </a>
+            </li>
+            <li>
+              <a href="/aboutus" className="usefulinks">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="/contactus" className="usefulinks">
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+const Contact = () => {
+  return (
+    <Container className="cont-container">
+      <Row lg={1} xs={1} className="">
+        <Col>
+          <h6 className="fw-bold text-dark">Contact Us</h6>
+          <div className="addd">
+            <p>
+              Central avenue road, Itwari,
+              <br /> Nagpur, Maharashtra
+            </p>
+          </div>
+        </Col>
+        <Col>
+          <div className="con">
+            <p>
+              <strong className="email-foot">Phone: </strong>
+              +91 9766547527
+            </p>
+            <p>
+              <strong className="email-foot">Email: </strong>
+              <span className="">kandarsushant@outlook.com</span>
+            </p>
+          </div>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+const Credits = () => {
+  return (
+    <Container>
+      <Row lg={1} xs={1} className="">
+        <Col className="center p-0 m-0">
+          <p className="txt-footer p-0 m-0">
             {" "}
             &copy; Copyright{" "}
             <strong>
               <span>HILUX</span>
             </strong>
             . All Rights Reserved
-          </div>
-
-          <div className="credits">
-            {" "}
-            Designed by{" "}
-            <a href="https://privatechnologies.in/" target="_blank">
-              PRIVA TECHNOLOGIES
-            </a>
-          </div>
-        </Container>
-      </footer>
-    </>
+          </p>
+        </Col>
+        <Col className="center ">
+          <span className="me-1 txt-des  txt-footer">Desgined by</span>
+          <a
+            href="https://privatechnologies.in/"
+            target="_blank"
+            className="text-dark txt-footer txt-des"
+            rel="noreferrer"
+          >
+            PRIVA TECHNOLOGIES
+          </a>
+        </Col>
+      </Row>
+    </Container>
   );
-}
+};

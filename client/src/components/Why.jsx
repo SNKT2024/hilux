@@ -8,7 +8,7 @@ import "../css/whyresponsive.css";
 export default function Why() {
   return (
     <>
-      <Container className="wrapper mt-4   main-container">
+      <Container className="wrapper-why mt-4   main-container">
         <div className="mt-3 p-3 main-div">
           <Row className="" md={1}>
             <Col

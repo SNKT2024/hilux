@@ -1,12 +1,12 @@
 import React from "react";
 import "../css/color.css";
 import "../css/topbar.css";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
 import "../css/main.css";
 
 export default function Topbar() {
@@ -32,11 +32,20 @@ export default function Topbar() {
             {/* <a href="" className="me-3 socialicons">
               <TwitterIcon fontSize="string" />
             </a> */}
-            <a href="" className="me-3 socialicons">
+            <a
+              href="https://www.facebook.com/Hilux-Laboratories-103764962768523/"
+              className="me-3 socialicons"
+            >
               <FacebookIcon fontSize="string" />
             </a>
-            <a href="">
+            {/* <a href="">
               <InstagramIcon fontSize="string socialicons" />
+            </a> */}
+            <a
+              href="https://www.linkedin.com/company/hilux-laboratories/"
+              className="me-3 socialicons"
+            >
+              <LinkedInIcon fontSize="string" />
             </a>
           </div>
         </Container>
